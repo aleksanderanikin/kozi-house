@@ -102,7 +102,9 @@ h6 {
     color: var(--color-light-xl);
 }
 
-.nav {}
+.nav {
+    transition: all 0.3s;
+}
 
 .nav__list {
     display: flex;
@@ -127,6 +129,48 @@ h6 {
     white-space: nowrap;
 }
 
+.burger {
+    width: 30px;
+    height: 22px;
+    display: none;
+    align-items: center;
+    position: relative;
+    cursor: pointer;
+}
+
+.burger__el {
+    display: block;
+    height: 2px;
+    background-color: #F1CDB3;
+}
+
+.burger.active {
+    display: flex;
+
+}
+
+.burger__el,
+.burger__el::before,
+.burger__el::after {
+    display: block;
+    height: 2px;
+    background-color: #F1CDB3;
+    width: 100%;
+}
+
+.burger__el::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.burger__el::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
 
 .hero__content {
     display: flex;

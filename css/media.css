@@ -27,3 +27,52 @@
         text-align: center;
     }
 }
+
+@media (max-width: 768px) {
+    .nav {
+        background: var(--color-dark-3xl);
+        position: fixed;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        width: 320px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        z-index: 100;
+    }
+
+    .nav:not(.active) {
+        width: 0;
+        overflow: hidden;
+    }
+
+    .nav__list {
+        flex-direction: column;
+    }
+
+    .nav__link {}
+
+    .burger {
+        display: flex;
+        z-index: 200;
+        position: fixed;
+        top: 30px;
+        right: 30px;
+        transition: all 0.3s;
+    }
+
+    .burger.active {
+        rotate: 90deg;
+    }
+
+    .help__container {}
+
+    .help__list {
+        gap: 55px 60px;
+    }
+
+    .help__item {
+        flex: 0 0 170px;
+    }
+}
